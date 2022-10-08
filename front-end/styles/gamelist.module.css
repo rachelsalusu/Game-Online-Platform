@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.container {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)),
+    url('../public/images/main-bg.jpeg');
+  padding-top: 16vh;
+  background-size: 100% 100%;
+  min-width: 100%;
+  min-height: 100vh;
+  font-family: 'Open Sans';
+}
+
+.removeHighlight {
+  color: black;
+  text-decoration: none;
+  font-family: 'Open Sans';
+}
+
+.fontColor{
+  color: white;
+}
+
+.buttonAdd{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
