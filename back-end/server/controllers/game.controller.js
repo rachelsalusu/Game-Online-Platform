@@ -34,7 +34,7 @@ class GameController {
       let conditions = [];
       const { name, desc} = req.query;
       if (name) {
-        conditions.push({ game });
+        conditions.push({ name });
       }
       if (desc) {
         conditions.push({ desc });
