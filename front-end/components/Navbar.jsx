@@ -1,18 +1,12 @@
 import React, { useEffect, useState } from 'react';
-// import { Nav, NavItem, NavLink } from "reactstrap";
 import styles from '../styles/Navbar.module.css';
 import Link from 'next/link';
-import { Button } from 'reactstrap';
-import { useSelector, useDispatch } from 'react-redux';
 
 function Navbar() {
   const [click, setCLick] = useState(false);
-  const [button, setButton] = useState(true);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const handleClick = () => setCLick(!click);
   const closeMobileMenu = () => setCLick(false);
-  const userState = useSelector((state) => state.users);
-  const dispatch = useDispatch();
 
   useEffect(() => {
     if (sessionStorage.userData === undefined){

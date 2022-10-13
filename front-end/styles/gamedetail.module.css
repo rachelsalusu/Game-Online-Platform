@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 .container{
-    background-image: url('../public/images/main-bg.jpeg');
+    background-image: url(../public/images/main-bg.jpeg);
     padding-top: 20vh;
     background-size: 100% 100%;
     min-width: 100%;
@@ -14,9 +14,7 @@
 }
 
 .imageGameSize {
-    width: 16em;
     border-radius: 20px;
-    height: 16em;
 }
 
 .fontFamily {

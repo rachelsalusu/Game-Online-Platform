@@ -5,6 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js",
+    "test": "jest --watch",
+    "test-ci": "jest --ci",
     "lint:check": "eslint .",
     "lint:fix": "eslint --fix ."
   },
@@ -30,7 +32,6 @@
     "passport-jwt": "^4.0.0",
     "pg": "^8.8.0",
     "sequelize": "^6.21.4",
-    "supertest": "^6.3.0",
     "swagger-ui-express": "^4.5.0"
   },
   "devDependencies": {
@@ -40,6 +41,7 @@
     "eslint-plugin-n": "^15.3.0",
     "eslint-plugin-promise": "^6.0.1",
     "nodemon": "^2.0.15",
-    "sequelize-cli": "^6.4.1"
+    "sequelize-cli": "^6.4.1",
+    "supertest": "^6.3.0"
   }
 }

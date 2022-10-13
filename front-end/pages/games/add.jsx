@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { Form, FormGroup, Row, Label, Input, Button, Container, Col, FormText } from "reactstrap";
+import { useState } from "react";
+import { Form, FormGroup, Label, Input, Button, Container, FormText } from "reactstrap";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import styles from "../../styles/addgame.module.css";
 import Navbar from "../../components/Navbar";

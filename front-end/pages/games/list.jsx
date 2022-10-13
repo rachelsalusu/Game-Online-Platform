@@ -1,9 +1,7 @@
-import { Component } from "react";
 import Link from "next/link";
 import { Card, CardBody, CardSubtitle, CardTitle, CardImg, Container, Button } from "reactstrap";
 import { useEffect, useLayoutEffect } from "react"
 import { useSelector, useDispatch } from "react-redux";
-
 import styles from "../../styles/gamelist.module.css";
 import { fetchGameList } from '../../middlewares/game-list'
 import { fetchLeaderboards } from '../../middlewares/leaderboards'
@@ -12,7 +10,6 @@ import Navbar from "../../components/Navbar";
 export default function GameList() {
   const gameListState = useSelector((state) => state.gameList);
   const leaderboardsState = useSelector((state) => state.leaderboards);
-  const userState = useSelector((state) => state.users);
 
   const dispatch = useDispatch();
 
@@ -28,11 +25,11 @@ export default function GameList() {
 
   // To check if user already played the game
   const alreadyPlayed = (id) => {
-    const played = false;
+    let played = false;
     if (sessionStorage.userData === undefined) {
       return played
     }
-    for (const i=1; i < leaderboardsState.leaderboards.length; i++){
+    for (let i=1; i < leaderboardsState.leaderboards.length; i++){
       if (leaderboardsState.leaderboards[i].game_id == id) {
         played = true;
         break

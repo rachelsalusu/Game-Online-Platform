@@ -1,20 +1,22 @@
 import { useRouter } from 'next/router'
-import Link from "next/link";
+// import Image from 'next/image'
+import Link from "next/link"
 import { useEffect } from "react"
-import { useSelector, useDispatch } from "react-redux";
-import { Table, Container, Button } from "reactstrap";
+import { useSelector, useDispatch } from "react-redux"
+import { Table, Container, Button } from "reactstrap"
 
-import styles from "../../styles/gamedetail.module.css";
-import { fetchGameDetails } from '../../middlewares/game-details';
-import Navbar from "../../components/Navbar";
+import styles from "../../styles/gamedetail.module.css"
+import { fetchGameDetails } from '../../middlewares/game-details'
+import Navbar from "../../components/Navbar"
+import ImageWithFallback from '../../components/imageWithFallback'
 
 export default function GameDetails() {
-  const router = useRouter();
-  const id = router.query;
+  const router = useRouter()
+  const id = router.query
   
-  const gameDetailsState = useSelector((state) => state.gameDetails);
-  const leaderboardsState = useSelector((state) => state.leaderboards);
-  const dispatch = useDispatch();
+  const gameDetailsState = useSelector((state) => state.gameDetails)
+  const leaderboardsState = useSelector((state) => state.leaderboards)
+  const dispatch = useDispatch()
 
   useEffect(() => {
     if (sessionStorage.userData === undefined){
@@ -41,7 +43,7 @@ export default function GameDetails() {
         );
       }
     }
-    return elements.reverse();
+    return elements.reverse()
   }
 
   return (
@@ -49,9 +51,22 @@ export default function GameDetails() {
     <Navbar />
         <Container className={styles.container}>
           <Container className={styles.contentGameDetail + " d-flex align-items-center mb-4"}>
-            <img
+            {/* <Image
               src={gameDetailsState.gameDetails.thumbnail_url}
-              className={styles.imageGameSize}></img>
+              alt={gameDetailsState.gameDetails.name}
+              width={500}
+              height={500}
+              >
+            </Image> */}
+            <ImageWithFallback
+              src={gameDetailsState.gameDetails.thumbnail_url}
+              className={styles.imageGameSize}
+              alt={gameDetailsState.gameDetails.name}
+              fallbackSrc='/../public/images/no-img-placeholder.png'
+              imgWidth={500}
+              imgHeight={500}
+
+            />
             <Container className="m-3">
               <p className={styles.fontGameName}>{gameDetailsState.gameDetails.name}</p>
               <p className={styles.fontGameDesc}>{gameDetailsState.gameDetails.desc}</p>

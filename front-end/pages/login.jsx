@@ -1,4 +1,3 @@
-import { Component } from 'react';
 // import Navbar from '../components/NavbarElement';
 import styles from '../styles/login.module.css';
 import { Container, Form, FormGroup, Button, Input, Nav, NavItem, NavLink } from 'reactstrap';

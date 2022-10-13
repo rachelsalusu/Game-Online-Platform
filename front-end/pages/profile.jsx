@@ -1,21 +1,14 @@
-import React, { Component } from 'react';
-// import { useNavigate } from "react-router";
-// import { Link } from "react-router-dom";
-// import { FacebookLoginButton } from 'react-social-login-buttons';
 import styles from '../styles/profile.module.css';
-
-import { Container, Form, FormGroup, Button, Label, Input, Col, FormText } from 'reactstrap';
-
-import { FETCH_USER, REFRESH_PAGE } from '../store/actions/user';
+import { Container, Form, FormGroup, Button, Label, Input, Col } from 'reactstrap';
+import { FETCH_USER } from '../store/actions/user';
 import { useRouter } from 'next/router';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import Navbar from '../components/Navbar';
 import { useEffect, useState } from 'react';
 
 export default function Profile() {
   const dispatch = useDispatch();
   const router = useRouter();
-  const userState = useSelector((state) => state.users);
   const [formData, setformData] = useState({
     name: '',
     email: '',
@@ -107,7 +100,7 @@ export default function Profile() {
   return (
     <>
       <Navbar />
-      <Container className={styles.containerProfile}>
+      <Container className={styles.containerProfile + " Container"}>
         <div className={styles.boxProfile}>
           <h2 className={styles.titleProfile}>PROFILE</h2>
         </div>

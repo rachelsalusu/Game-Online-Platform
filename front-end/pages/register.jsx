@@ -1,14 +1,9 @@
-import { Component } from 'react';
 import styles from '../styles/register.module.css';
-// import Navbar from '../components/NavbarElement';
-import { useDispatch, useSelector } from 'react-redux';
 import { useRouter } from 'next/router';
 import Navbar from "../components/Navbar";
 import { Container, Form, FormGroup, Button, Label, Input } from 'reactstrap';
 
 export default function Register() {
-  const userState = useSelector((state) => state.users);
-  const dispatch = useDispatch();
   const router = useRouter();
 
   const handleSubmit = (e) => {

@@ -6,7 +6,7 @@
 
 .containerRegister {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)),
-    url('../public/images/register/register-bg.jpeg');
+    url(../public/images/register/register-bg.jpeg);
   display: flex;
   justify-content: center;
   padding-top: 10px;

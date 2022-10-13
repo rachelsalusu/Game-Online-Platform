@@ -2,7 +2,7 @@
 
 .containerProfile {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)),
-    url('../public/images/login/login-bg.jpeg');
+    url(../public/images/login/login-bg.jpeg);
   display: flex;
   justify-content: center;
   padding-top: 20px;

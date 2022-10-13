@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
 .containerLogin {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)),
-    url('../public/images/login/login-bg.jpeg');
+    url(../public/images/login/login-bg.jpeg);
   display: flex;
   justify-content: center;
   padding-top: 100px;
