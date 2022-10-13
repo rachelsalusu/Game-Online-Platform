@@ -10,5 +10,8 @@ describe('Home', () => {
     })
 
     expect(heading).toBeInTheDocument()
+
+    // const button = test.getElementsByClassName('.btn')
+    // console.log('ini button ',test)
   })
 })

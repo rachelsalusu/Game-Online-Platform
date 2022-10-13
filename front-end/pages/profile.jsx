@@ -26,31 +26,6 @@ export default function Profile() {
     console.log(formData);
   };
 
-  const fetchProfile = () => {
-    fetch(`http://localhost:4000/api/v1/users/${JSON.parse(sessionStorage.userData).id}`,{
-      method: 'GET',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-        Authorization : JSON.parse(sessionStorage.userData).accessToken
-
-      },
-    })
-      .then((res) => res.json())
-      .then((json) => {
-        console.log(json);
-        console.log(json.result, json.message);
-        if (json.result === 'Success') {
-          dispatch({
-            type: FETCH_USER,
-            payload: json.data,
-          });
-          setformData(json.data);
-          console.log(json.data);
-        }
-      });
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     const profile = {
@@ -89,6 +64,31 @@ export default function Profile() {
   };
 
   useEffect(() => {
+    const fetchProfile = () => {
+      fetch(`http://localhost:4000/api/v1/users/${JSON.parse(sessionStorage.userData).id}`,{
+        method: 'GET',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+          Authorization : JSON.parse(sessionStorage.userData).accessToken
+  
+        },
+      })
+        .then((res) => res.json())
+        .then((json) => {
+          console.log(json);
+          console.log(json.result, json.message);
+          if (json.result === 'Success') {
+            dispatch({
+              type: FETCH_USER,
+              payload: json.data,
+            });
+            setformData(json.data);
+            console.log(json.data);
+          }
+        });
+    };
+
     if (sessionStorage.userData === undefined){
       router.push('/login')
     }

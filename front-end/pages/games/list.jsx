@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Card, CardBody, CardSubtitle, CardTitle, CardImg, Container, Button } from "reactstrap";
-import { useEffect, useLayoutEffect } from "react"
+import { useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux";
 import styles from "../../styles/gamelist.module.css";
 import { fetchGameList } from '../../middlewares/game-list'
@@ -17,7 +17,7 @@ export default function GameList() {
     dispatch(fetchGameList())
   },[]);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (sessionStorage.userData !== undefined) {
       dispatch(fetchLeaderboards())
     }

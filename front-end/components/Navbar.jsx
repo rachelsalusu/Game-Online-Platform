@@ -15,7 +15,7 @@ function Navbar() {
     else if (sessionStorage.userData !== undefined) {
       setIsLoggedIn(true)
     }
-  });
+  }, []);
 
   return (
     <>

@@ -13,7 +13,7 @@ function HeroSection() {
         <h1>PLAY THE GAME</h1>
         <p>What are you waiting for?</p>
         <div className={styles["hero-btns"]}>
-          <Button size="lg" className={styles.btn}>
+          <Button size="lg" className={styles.btn + " cobaajayakan"}>
             <Link href='/games/list'>
               <a className={styles['font-color']}>
               PLAY NOW
