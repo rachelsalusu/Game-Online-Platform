@@ -10,7 +10,7 @@ describe("test profile", ()=>{
     const mockStore = configureStore();
     let store;
 
-    fit('Title "My Profile" should be displayed', () => {
+    it('Title "My Profile" should be displayed', () => {
         store = mockStore(initialState);
 
         jest.spyOn(Router, 'useRouter').mockReturnValue([])

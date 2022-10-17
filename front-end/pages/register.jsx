@@ -43,7 +43,7 @@ export default function Register() {
         </div>
         <Form className={styles.registerForm} onSubmit={handleSubmit}>
           <FormGroup className={styles.formGroup}>
-            <Label for='email'>Email</Label>
+            <Label htmlFor='email'>Email</Label>
             <Input
               id='Email'
               name='email'
@@ -53,7 +53,7 @@ export default function Register() {
           </FormGroup>
 
           <FormGroup className={styles.formGroup}>
-            <Label for='username'>Username</Label>
+            <Label htmlFor='username'>Username</Label>
             <Input
               id='Username'
               name='username'
@@ -63,7 +63,7 @@ export default function Register() {
           </FormGroup>
 
           <FormGroup className={styles.formGroup}>
-            <Label for='password'>Password</Label>
+            <Label htmlFor='password'>Password</Label>
             <Input
               id='Password'
               name='password'
@@ -72,8 +72,8 @@ export default function Register() {
             />
           </FormGroup>
 
-          <FormGroup className={styles.formGroup}>
-            <Label for='confPassword'>Confirm Password</Label>
+          <FormGroup className={styles.formGroup} >
+            <Label htmlFor='confPassword'>Confirm Password</Label>
             <Input
               id='confPassword'
               name='confPassword'
@@ -83,7 +83,7 @@ export default function Register() {
           </FormGroup>
 
           <FormGroup className={styles.buttonRegister}>
-            <Button
+            <Button id="buttonRegister"
               type=''
               block
               color='primary'

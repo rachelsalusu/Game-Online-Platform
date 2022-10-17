@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
 /* body {
   overflow: hidden;
 } */
@@ -9,9 +9,9 @@
     url(../public/images/register/register-bg.jpeg);
   display: flex;
   justify-content: center;
-  padding-top: 10px;
-  background-size: 100% 100%;
-  min-width: 100%;
+  /* padding-top: 10px; */
+  padding-top: 1.2em;
+  min-width: 100vw;
   min-height: 100vh;
   background-size: cover;
   background-position: center;
@@ -27,7 +27,7 @@
   font-weight: bold;
   color: white;
   font-size: 35px;
-  font-family: 'Open Sans';
+  font-family: 'Poppins';
 }
 
 .registerForm {
@@ -37,14 +37,19 @@
   /* margin-bottom: 1em; */
   margin-left: auto;
   margin-right: auto;
-  margin-top: 150px;
+  margin-top: 5em;
   padding: 2em;
-  padding-top: 110px;
+  padding-top: 6em;
   text-align: left;
-  width: 380px;
-  height: 540px;
+  width: 25em;
+  height: 33em;
+  font-size: 16.5px;
   /* background-color: #e4e4e4; */
   background: rgba(255, 255, 255, 1);
+}
+
+#Password {
+  height: 20px;
 }
 
 .boxRegister {
@@ -55,16 +60,15 @@
   text-align: center;
   border: 8px;
   border-radius: 0.5em;
-  margin-top: 120px;
-  width: 340px;
-  height: 120px;
+  margin-top: 3.5em;
+  width: 21em;
+  height: 6.5em;
   background-color: #007bff;
 }
 
 .buttonRegister {
   display: flex;
   justify-content: center;
-  margin-top: 26px;
 }
 
 .form-control {

@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Nabla&family=Silkscreen&display=swap'); */
+
 .navbar {
   background: #000000;
   width: 100%;
@@ -11,6 +15,7 @@
   z-index: 999;
   position: fixed;
   color: white !important;
+  font-family: 'Poppins';
 }
 
 .navbar-container {
@@ -32,6 +37,7 @@
   text-decoration: none;
   font-size: 2rem;
   display: flex;
+  font-family: "Silkscreen";
   align-items: center;
 }
 
@@ -133,7 +139,7 @@
     left: 0;
     transform: translate(25%, 50%);
   }
-
+  
   .menu-icon {
     display: block;
     position: absolute;
