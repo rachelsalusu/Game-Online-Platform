@@ -41,14 +41,13 @@ export default function Profile() {
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
-        Authorization : JSON.parse(sessionStorage.userData).accessToken
-
+        Authorization: JSON.parse(sessionStorage.userData).accessToken,
       },
       body: JSON.stringify(profile),
     })
       .then((res) => res.json())
       .then((json) => {
-        console.log('ini json ',json);
+        console.log('ini json ', json);
         // console.log(json.result, json.message);
         if (json.result === 'Success') {
           dispatch({
@@ -56,8 +55,7 @@ export default function Profile() {
             payload: json.data,
           });
           alert('Profile updated successfully');
-        }
-        else {
+        } else {
           router.push('/login');
         }
       });
@@ -65,13 +63,12 @@ export default function Profile() {
 
   useEffect(() => {
     const fetchProfile = () => {
-      fetch(`http://localhost:4000/api/v1/users/${JSON.parse(sessionStorage.userData).id}`,{
+      fetch(`http://localhost:4000/api/v1/users/${JSON.parse(sessionStorage.userData).id}`, {
         method: 'GET',
         headers: {
           Accept: 'application/json',
           'Content-Type': 'application/json',
-          Authorization : JSON.parse(sessionStorage.userData).accessToken
-  
+          Authorization: JSON.parse(sessionStorage.userData).accessToken,
         },
       })
         .then((res) => res.json())
@@ -89,10 +86,9 @@ export default function Profile() {
         });
     };
 
-    if (sessionStorage.userData === undefined){
-      router.push('/login')
-    }
-    else if (sessionStorage.userData !== undefined){
+    if (sessionStorage.userData === undefined) {
+      router.push('/login');
+    } else if (sessionStorage.userData !== undefined) {
       fetchProfile();
     }
   }, []);
@@ -100,7 +96,7 @@ export default function Profile() {
   return (
     <>
       <Navbar />
-      <Container className={styles.containerProfile + " Container"}>
+      <Container className={styles.containerProfile + ' Container'}>
         <div className={styles.boxProfile}>
           <h2 className={styles.titleProfile}>PROFILE</h2>
         </div>

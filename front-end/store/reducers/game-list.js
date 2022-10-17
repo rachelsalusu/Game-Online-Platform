@@ -1,4 +1,4 @@
-import { FETCH, FETCH_SUCCESS, FETCH_FAIL } from "../actions/game-list";
+import { FETCH, FETCH_SUCCESS, FETCH_FAIL } from '../actions/game-list';
 
 const initialState = {
   loading: false,
@@ -23,12 +23,12 @@ export default function (state = initialState, action) {
     }
 
     case FETCH_FAIL: {
-        return {
-            ...state,
-            loading: false,
-            error: action.error
-        }
-      }
+      return {
+        ...state,
+        loading: false,
+        error: action.error,
+      };
+    }
 
     default: {
       return state;

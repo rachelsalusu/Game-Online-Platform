@@ -5,10 +5,13 @@
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js",
-    "test": "jest --watch",
+    "test": "jest --watch --testTimeout=90000",
     "test-ci": "jest --ci",
     "lint:check": "eslint .",
     "lint:fix": "eslint --fix ."
+  },
+  "jest": {
+    "testEnvironment": "node"
   },
   "repository": {
     "type": "git",
