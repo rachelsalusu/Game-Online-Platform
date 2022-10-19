@@ -1,17 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
+
 .containerLogin {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)),
     url(../public/images/login/login-bg.jpeg);
   display: flex;
   justify-content: center;
-  padding-top: 100px;
+  /* padding-top: 100px; */
+  padding-top: 4.5em;
   min-width: 100%;
   min-height: 100vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: 100% 100%;
   /* background-size: 100% 100%; */
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   font-family: 'Quicksand', Courier, monospace;
 }
 
@@ -22,7 +26,7 @@
   font-weight: bold;
   font-size: 35px;
   color: white;
-  font-family: 'Open Sans';
+  font-family: 'Poppins';
 }
 
 .loginForm {
@@ -30,12 +34,12 @@
   border-radius: 1em;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 130px;
+  margin-top: 5em;
   padding: 2em;
-  padding-top: 130px;
+  padding-top: 6em;
   text-align: left;
-  width: 350px;
-  height: 390px;
+  width: 21em;
+  height: 24em;
   background: rgba(255, 255, 255, 1);
 }
 
@@ -59,8 +63,8 @@ input[type='password'] {
   text-align: center;
   font-weight: bold;
   font-size: 16.5px;
-  padding-top: 5px;
-  padding-bottom: 20px;
+  padding-top: .1em;
+  padding-bottom: .8em;
   text-decoration: none !important;
 }
 
@@ -72,16 +76,15 @@ input[type='password'] {
   text-align: center;
   border: 8px;
   border-radius: 0.5em;
-  margin-top: 100px;
-  width: 310px;
-  height: 120px;
+  margin-top: 3em;
+  width: 19em;
+  height: 7em;
   background-color: #007bff;
 }
 
 .buttonLogin {
   display: flex;
   justify-content: center;
-  padding-top: 30px;
 }
 
 @media screen and (max-width: 1000px) {

@@ -1,3 +1,9 @@
+module.exports = {
+  moduleNameMapper: {
+    '\\.(css|less)$': '<rootDir>/test/jest/__mocks__/styleMock.js',
+  }
+};
+
 const nextJest = require('next/jest')
 
 const createJestConfig = nextJest({

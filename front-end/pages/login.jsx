@@ -1,6 +1,6 @@
 // import Navbar from '../components/NavbarElement';
 import styles from '../styles/login.module.css';
-import { Container, Form, FormGroup, Button, Input, Nav, NavItem, NavLink } from 'reactstrap';
+import { Container, Form, FormGroup, Button, Input, Nav, NavItem, NavLink, Label } from 'reactstrap';
 import { useDispatch } from 'react-redux';
 import { LOGIN } from '../store/actions/user';
 import { useRouter } from 'next/router';
@@ -52,10 +52,12 @@ export default function Login() {
         </div>
         <Form className={styles.loginForm} onSubmit={handleSubmit}>
           <FormGroup className={styles.formGroup}>
+            <Label htmlFor="username">Username</Label>
             <Input id="username" name="username" placeholder="Username" type="text" />
           </FormGroup>
           <FormGroup className={styles.formGroup}>
-            <Input id="Password" name="password" placeholder="Password" type="password" />
+            <Label htmlFor="password">Password</Label>
+            <Input id="password" name="password" placeholder="Password" type="password" />
           </FormGroup>
 
           <Nav className={styles.forgotPass}>
@@ -65,10 +67,7 @@ export default function Login() {
           </Nav>
 
           <FormGroup>
-            <Button color="primary" block>
-              {' '}
-              Login{' '}
-            </Button>
+            <Button id="buttonLogin" color="primary" block>Login</Button>
           </FormGroup>
         </Form>
       </Container>
