@@ -1,0 +1,9 @@
+{
+    "extends": ["eslint:recommended", "next/core-web-vitals"],
+    "plugins": ["testing-library"],
+    "env": {
+      "browser": true,
+      "jest": true
+    }
+    // "rules": {"camelcase": "error"}
+  }
