@@ -1,21 +1,17 @@
 const request = require('supertest')
-const app = require('../server/routes/index')
+const app = require('../app')
+
+jest.setTimeout(90000)
 
 describe('GET / ', () => {
-    test('Return status 201 and payload list of games', () => {
-        request(app)
-            .get('/')
-            .expect("Content-Type", /json/)
-            .expect(400)
-            // .expect(res => {
-            //     expect(res.statusCode).toBe(201)
-            //     expect(res.body).toHaveProperty('test from /apie')
-            //     expect(res.body.status).toBe(true)
-            // })
-            // .end((err, res) => {
-            //     if (err) return done(err);
-            //     return done();
-            //   });
+
+    it('Return status 200 and payload list of games', async() => {
+        const res = await request(app).get('/api/v1/')
+
+        // console.log(res)
+        expect(res.status).toBe(200)
+        // expect(res.text).toBe('test from /api/v1')
+        // expect(res.data).toBe('test from /api/v1')
     })
         
 })
