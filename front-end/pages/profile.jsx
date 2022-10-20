@@ -23,7 +23,6 @@ export default function Profile() {
       ...formData,
       ...{ [e.target.name]: e.target.value },
     });
-    console.log(formData);
   };
 
   const handleSubmit = (e) => {
@@ -48,8 +47,6 @@ export default function Profile() {
     })
       .then((res) => res.json())
       .then((json) => {
-        console.log('ini json ',json);
-        // console.log(json.result, json.message);
         if (json.result === 'Success') {
           dispatch({
             type: FETCH_USER,
@@ -76,15 +73,12 @@ export default function Profile() {
       })
         .then((res) => res.json())
         .then((json) => {
-          console.log(json);
-          console.log(json.result, json.message);
           if (json.result === 'Success') {
             dispatch({
               type: FETCH_USER,
               payload: json.data,
             });
             setformData(json.data);
-            console.log(json.data);
           }
         });
     };
@@ -104,7 +98,7 @@ export default function Profile() {
         <div className={styles.boxProfile}>
           <h2 className={styles.titleProfile}>PROFILE</h2>
         </div>
-        <Form className={styles.profileForm} onSubmit={handleSubmit}>
+        <Form id='form' className={styles.profileForm} onSubmit={handleSubmit}>
           <FormGroup row>
             <Label for="Name" sm={3}>
               Name
@@ -174,7 +168,7 @@ export default function Profile() {
           </FormGroup> */}
 
           <FormGroup>
-            <Button block className={styles.buttonProfile} type="submit" color="primary" onSubmit={handleSubmit}>
+            <Button block id='buttonUpdate' className={styles.buttonProfile} type="submit" color="primary" onSubmit={handleSubmit}>
               Update
             </Button>
           </FormGroup>

@@ -3,7 +3,7 @@ import Login from '../pages/login'
 import Router from 'next/router';
 import { Provider } from 'react-redux'
 import configureStore from 'redux-mock-store';
-import { render, screen, fireEvent, act } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
 describe("test login", () => {
